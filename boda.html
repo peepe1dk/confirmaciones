@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Asistencia - Boda</title>
+    <!-- Aquí enlazas tu archivo CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Confirmación de Asistencia</h2>
+        <!-- Aquí enlazas el archivo PHP (conexion.php) para procesar el formulario -->
+        <form action="conexion.php" method="POST">
+            <label for="nombreFamilia">Nombre de la Familia:</label>
+            <input type="text" id="nombreFamilia" name="nombreFamilia" required>
+
+            <label for="asistira">¿Podrá asistir?</label>
+            <div class="radio-group">
+                <input type="radio" id="si" name="asistira" value="Sí" required>
+                <label for="si">Sí</label>
+                <input type="radio" id="no" name="asistira" value="No" required>
+                <label for="no">No</label>
+            </div>
+
+            <label for="numeroAsistentes">Número de Asistentes:</label>
+            <input type="number" id="numeroAsistentes" name="numeroAsistentes" required min="1" max="10">
+
+            <input type="submit" value="Confirmar">
+        </form>
+    </div>
+</body>
+</html>
